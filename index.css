@@ -1,0 +1,476 @@
+/* Universal Styles */
+
+:root {
+  --color-1: #344e41;
+  --color-2: #3a5a40;
+  --color-3: #dad7cd;
+  --text-color-1: #f0f0f0;
+  --text-color-2: #1c1c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: Poppins, "Segoe UI", Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* Skip Button for Accessability (Hidden off screen) */
+
+.skip {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  overflow: hidden;
+}
+
+/* Nav Bar & Header */
+
+nav {
+  width: 100%;
+  height: 3.75rem;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+  background-color: var(--color-1);
+}
+
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color-1);
+}
+
+nav a:hover {
+  background-color: var(--color-2);
+}
+
+nav svg {
+  fill: var(--text-color-1);
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+
+/* Hero Section */
+
+.hero {
+  height: 20rem;
+  position: relative;
+  top: 3.75rem; /* To offset fixed navbar */
+  display: flex;
+  background-color: var(--color-3);
+}
+
+.information {
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  margin: 5rem 0;
+  color: var(--text-color-2);
+}
+
+.information h1 {
+  padding-bottom: 0.25rem;
+  font-size: 5.25rem;
+  font-weight: 400;
+  font-family: Handjet;
+}
+
+.information p {
+  font-size: 2.5rem;
+  font-family: Handjet;
+  text-transform: uppercase;
+}
+
+/* Content Section */
+
+/* General Styling */
+
+main {
+  position: relative;
+  top: 3.75rem; /* To offset fixed navbar */
+  display: flex;
+  flex-direction: column;
+}
+
+.content-img {
+  overflow: hidden;
+}
+
+.content-img img {
+  max-width: 100%;
+  border-radius: 1%;
+}
+
+.content {
+  width: 37.5rem;
+  height: 25rem;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--color-3);
+}
+
+.content h2 {
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.content-img {
+  margin: 3rem;
+}
+
+/* Section Styling */
+
+.services,
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+  background-color: var(--color-3);
+}
+
+.services-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.services-img {
+  display: flex;
+  flex-direction: column;
+}
+
+.charging-img {
+  padding-top: 0.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.solar-img {
+  padding-bottom: 1rem;
+}
+
+.smart-home-img {
+  padding-bottom: 1.25rem;
+}
+
+.it-img {
+  padding-bottom: 1.75rem;
+}
+
+.services svg {
+  fill: var(--text-color-2);
+  padding-right: 0.5rem;
+}
+
+.services h3 {
+  font-weight: 500;
+}
+
+.charging,
+.solar,
+.smart-home,
+.it,
+.recycle {
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.quote,
+.about {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  flex: 1;
+  background-color: var(--color-3);
+}
+
+.quote .content {
+  justify-content: center;
+  align-items: center;
+}
+
+.about .content h3 {
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+
+.about .content p {
+  text-align: start;
+  padding-bottom: 0.5rem;
+}
+
+/* CTA Button */
+
+#offert button {
+  width: 28rem;
+  height: 3rem;
+  margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--color-2);
+  color: var(--text-color-1);
+  border: 1px solid black;
+}
+
+#offert button svg {
+  padding-right: 0.25rem;
+  fill: var(--text-color-1);
+}
+
+#offert p {
+  margin: 0.5rem 1rem;
+  font-size: 1.25rem;
+}
+
+/* Contact Form */
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  text-align: start;
+  border: none;
+}
+
+fieldset label {
+  font-weight: 500;
+}
+
+input {
+  height: 1.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid black;
+}
+
+fieldset button {
+  height: 2.25rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid black;
+}
+
+textarea {
+  resize: none;
+  margin-bottom: 0.9rem;
+  border: 1px solid black;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: 3.75rem;
+  position: relative;
+  top: 3.75rem; /* To offset fixed navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-1);
+}
+
+footer p {
+  text-align: center;
+  color: var(--text-color-1);
+}
+
+footer svg {
+  padding: 0.5rem;
+  fill: var(--text-color-1);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 567px) {
+  /* Nav-bar and Header */
+  nav {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .links-container {
+    width: 300px;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    background-color: var(--color-1);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+  }
+
+  nav a {
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+  }
+
+  .home {
+    width: auto;
+    margin-right: auto;
+    padding: 0.875rem;
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  /* Hero Section */
+
+  .hero {
+    height: 15rem;
+  }
+
+  .information {
+    width: 100%;
+    text-align: center;
+    color: var(--text-color-2);
+  }
+
+  .information h1 {
+    font-size: 3rem;
+  }
+
+  .information p {
+    font-size: 1.45rem;
+  }
+
+  /* Content Section */
+
+  .content {
+    height: 25rem;
+    margin: 1rem;
+  }
+
+  .content-img {
+    margin: 1rem;
+  }
+
+  #tjänster .content,
+  #offert .content,
+  #om-oss .content,
+  .services-wrapper {
+    height: auto;
+  }
+
+  .charging-img,
+  .solar-img,
+  .smart-home-img,
+  .it-img {
+    padding-bottom: 0;
+  }
+
+  .services-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .services-content p {
+    display: none;
+  }
+
+  .charging,
+  .solar,
+  .smart-home,
+  .it,
+  .recycle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #offert p {
+    margin: 0.5rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .about .content p {
+    font-size: 0.9rem;
+  }
+
+  .about .content p:last-child {
+    padding-bottom: 0;
+  }
+
+  /* CTA Button */
+
+  #offert button {
+    width: 20rem;
+    height: 3rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-2);
+    color: var(--text-color-1);
+  }
+
+  /* Footer */
+
+  footer svg {
+    padding: 0.2rem;
+  }
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Validated 18/09/2024 https://jigsaw.w3.org/css-validator/ */
